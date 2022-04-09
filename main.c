@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <bsd/string.h>
+#include <stdlib.h>
 #include "libft.h"
 
 
@@ -78,78 +79,96 @@ void t_strlcat()
 	printf("-------------------------------------------------------------------------------------------------\n");
 	printf("FT_STRLCAT\n\n");
 
-	/*char str1[] = "World";
+	char str1[] = "World";
 	char str2[12] = "Hello ";
+	char *dest2 = strdup(str2);
 	size_t n1 = 12;
 	printf("input src: %s\n", str1);
 	printf("input dest: %s\n", str2);
 	printf("Expected output: %zu\n", strlcat(str2, str1, n1));
-	printf("Received output: %zu\n", ft_strlcat(str2, str1, n1));
+	printf("Received output: %zu\n", ft_strlcat(dest2, str1, n1));
 	printf("output dest: %s\n\n", str2);
+	free(dest2);
 
 	char str3[] = "0 1 2 3 4 5 6 7 8 9";
 	char str4[38] = "a b c d e f g h i j";
+	char *dest4 = strdup(str4);
 	printf("input src: %s\n", str3);
 	printf("input dest: %s\n", str4);
 	printf("Expected output: %zu\n", strlcat(str4, str3, 38));
-	printf("Received output: %zu\n", ft_strlcat(str4, str3, 38));
+	printf("Received output: %zu\n", ft_strlcat(dest4, str3, 38));
 	printf("output dest: %s\n\n", str4);
+	free(dest4);
 
 	char str5[] = " strlcat";
 	char str6[100] = "Testing function";
+	char *dest6 = strdup(str6);
 	printf("input src: %s\n", str5);
 	printf("input dest: %s\n", str6);
 	printf("Expected output: %zu\n", strlcat(str6, str5, 100));
-	printf("Received output: %zu\n", ft_strlcat(str6, str5, 100));
-	printf("output dest: %s\n\n", str6);
+	printf("Received output: %zu\n", ft_strlcat(dest6, str5, 100));
+	printf("output dest: %s\n\n", str6); 
+	free(dest6);
 
 	char str7[] = "tutu tutu tutu";
 	char str8[] = "0 1 2 3 4 5 6 7 8 9 10";
+	char *dest8 = strdup(str8);
 	printf("input src: %s\n", str7);
 	printf("input dest: %s\n", str8);
 	printf("Expected output: %zu\n", strlcat(str8, str7, 0));
-	printf("Received output: %zu\n", ft_strlcat(str8, str7, 0));
-	printf("output dest: %s\n\n", str8);
+	printf("Received output: %zu\n", ft_strlcat(dest8, str7, 0));
+	printf("output dest: %s\n\n", str8); 
+	free(dest8);
 
 	char str9[] = "funfandoooo ooo";
 	char str10[] = "funfa";
+	char *dest10 = strdup(str10);
 	printf("input src: %s\n", str9);
 	printf("input src: %s\n", str10);
 	printf("Expected output: %zu\n", strlcat(str10, str9, 3));
-	printf("Received output: %zu\n", ft_strlcat(str10, str9, 3));
-	printf("output dest: %s\n\n", str10); */
+	printf("Received output: %zu\n", ft_strlcat(dest10, str9, 3));
+	printf("output dest: %s\n\n", str10); 
+	free(dest10);
 
 	char str11[] = "ijklmnop"; //src
 	char str12[40] = "abcdefgh"; //dest
+	char *dest12 = strdup(str12);
 	printf("input src: %s\n", str11);
 	printf("input dest: %s\n", str12);
 	printf("Expected output: %zu\n", strlcat(str12, str11, 40));
-	printf("Received output: %zu\n", ft_strlcat(str12, str11, 40));
+	printf("Received output: %zu\n", ft_strlcat(dest12, str11, 40));
 	printf("output dest: %s\n\n", str12);
+	free(dest12);
 
-	/*char str13[] = "sp";
+	char str13[] = "sp";
 	char str14[4] = "bh";
+	char *dest14 = strdup(str14);
 	printf("input src: %s\n", str13);
 	printf("input dest: %s\n", str14);
 	printf("Expected output: %zu\n", strlcat(str14, str13, 4));
-	printf("Received output: %zu\n", ft_strlcat(str14, str13, 4));
+	printf("Received output: %zu\n", ft_strlcat(dest14, str13, 4));
 	printf("output dest: %s\n\n", str14);
+	free(dest14);	
 
 	char str15[] = "abc";
 	char str16[15];
+	char *dest16 = strdup(str16);
 	printf("input src: %s\n", str15);
 	printf("input dest: [null]\n");
 	printf("Expected output: %zu\n", strlcat(str16, str15, 15));
-	printf("Received output: %zu\n", ft_strlcat(str16, str15, 15));
+	printf("Received output: %zu\n", ft_strlcat(dest16, str15, 15));
 	printf("output dest: %s\n\n", str16);
+	free(dest16);
 
 	char str19[] = "ABCDEFG";
 	char str20[15] = "abcdefg";
+	char *dest20 = strdup(str20);
 	printf("input src: %s\n", str19);
 	printf("input dest: %s\n", str20);
 	printf("Expected output: %zu\n", strlcat(str20, str19, 15));
-	printf("Received output: %zu\n", ft_strlcat(str20, str19, 15));
-	printf("output dest: %s\n\n", str20);*/
+	printf("Received output: %zu\n", ft_strlcat(dest20, str19, 15));
+	printf("output dest: %s\n\n", str20);
+	free(dest20);
 
 	printf("FT_STRLCAT\n");
 	printf("-------------------------------------------------------------------------------------------------\n");

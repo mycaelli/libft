@@ -1,6 +1,6 @@
 NAME = libft.a
 
-HEADER = libft.h
+PATH_INCLUDES = -I ./
 
 SRC = 	ft_isalpha.c \
       	ft_isdigit.c \
@@ -13,11 +13,15 @@ SRC = 	ft_isalpha.c \
 		ft_memcpy.c \
 		ft_memmove.c \
 		ft_memchr.c \
-		ft_memcmp.c
+		ft_memcmp.c \
+		ft_strlen.c \
+		ft_strlcpy.c \
+		ft_strchr.c \
+		ft_strlcat.c
 
 OBJ = $(SRC:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -g3 -Wall -Wextra -Werror #-lbsd
 
 CC = cc
 
@@ -29,13 +33,13 @@ $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 $(OBJ):
-	$(CC) -c $(FLAGS) $(SRC) $(HEADER)
+	$(CC) -c $(CFLAGS) $(PATH_INCLUDES) $(SRC)
 
 run:	cmp
 	./a
 
 cmp:
-	$(CC) $(FLAGS) $(SRC) ./main.c -o a
+	$(CC) $(CFLAGS) $(SRC) -lbsd ./main.c -o a
 
 clean:
 	rm -rf $(OBJ) ./a

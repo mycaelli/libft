@@ -87,7 +87,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str2);
 	printf("Expected output: %zu\n", strlcat(str2, str1, n1));
 	printf("Received output: %zu\n", ft_strlcat(dest2, str1, n1));
-	printf("output dest: %s\n\n", str2);
+	printf("output strlcat: %s\n", str2);
+	printf("output ft_strlcat: %s\n\n", dest2);
 	free(dest2);
 
 	char str3[] = "0 1 2 3 4 5 6 7 8 9";
@@ -97,7 +98,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str4);
 	printf("Expected output: %zu\n", strlcat(str4, str3, 38));
 	printf("Received output: %zu\n", ft_strlcat(dest4, str3, 38));
-	printf("output dest: %s\n\n", str4);
+	printf("output strlcat: %s\n", str4);
+	printf("output ft_strlcar: %s\n\n", dest4);
 	free(dest4);
 
 	char str5[] = " strlcat";
@@ -107,7 +109,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str6);
 	printf("Expected output: %zu\n", strlcat(str6, str5, 100));
 	printf("Received output: %zu\n", ft_strlcat(dest6, str5, 100));
-	printf("output dest: %s\n\n", str6); 
+	printf("output strlcat: %s\n", str6);
+	printf("output ft_strlcat: %s\n\n", dest6); 
 	free(dest6);
 
 	char str7[] = "tutu tutu tutu";
@@ -117,7 +120,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str8);
 	printf("Expected output: %zu\n", strlcat(str8, str7, 0));
 	printf("Received output: %zu\n", ft_strlcat(dest8, str7, 0));
-	printf("output dest: %s\n\n", str8); 
+	printf("output strlcat: %s\n", str8); 
+	printf("output ft_strlcat: %s\n\n", dest8); 
 	free(dest8);
 
 	char str9[] = "funfandoooo ooo";
@@ -127,7 +131,8 @@ void t_strlcat()
 	printf("input src: %s\n", str10);
 	printf("Expected output: %zu\n", strlcat(str10, str9, 3));
 	printf("Received output: %zu\n", ft_strlcat(dest10, str9, 3));
-	printf("output dest: %s\n\n", str10); 
+	printf("output strlcat: %s\n", str10);
+	printf("output ft_strlcat: %s\n\n", dest10); 
 	free(dest10);
 
 	char str11[] = "ijklmnop"; //src
@@ -137,7 +142,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str12);
 	printf("Expected output: %zu\n", strlcat(str12, str11, 40));
 	printf("Received output: %zu\n", ft_strlcat(dest12, str11, 40));
-	printf("output dest: %s\n\n", str12);
+	printf("output strlcat: %s\n", str12);
+	printf("output ft_strlcat: %s\n\n", dest12);
 	free(dest12);
 
 	char str13[] = "sp";
@@ -147,7 +153,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str14);
 	printf("Expected output: %zu\n", strlcat(str14, str13, 4));
 	printf("Received output: %zu\n", ft_strlcat(dest14, str13, 4));
-	printf("output dest: %s\n\n", str14);
+	printf("output strlcat: %s\n", str14);
+	printf("output ft_strlcat: %s\n\n", dest14);
 	free(dest14);	
 
 	char str15[] = "abc";
@@ -157,7 +164,8 @@ void t_strlcat()
 	printf("input dest: [null]\n");
 	printf("Expected output: %zu\n", strlcat(str16, str15, 15));
 	printf("Received output: %zu\n", ft_strlcat(dest16, str15, 15));
-	printf("output dest: %s\n\n", str16);
+	printf("output strlcat: %s\n", str16);
+	printf("output ft_strlcat: %s\n\n", dest16);
 	free(dest16);
 
 	char str19[] = "ABCDEFG";
@@ -167,7 +175,8 @@ void t_strlcat()
 	printf("input dest: %s\n", str20);
 	printf("Expected output: %zu\n", strlcat(str20, str19, 15));
 	printf("Received output: %zu\n", ft_strlcat(dest20, str19, 15));
-	printf("output dest: %s\n\n", str20);
+	printf("output strlcat: %s\n", str20);
+	printf("output ft_strlcat: %s\n\n", dest20);
 	free(dest20);
 
 	printf("FT_STRLCAT\n");

@@ -6,11 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:15:57 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/06 20:19:55 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:23:31 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *a1, const void *a2, size_t size)
 {

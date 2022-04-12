@@ -6,11 +6,13 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 05:17:33 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/06 18:22:16 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:23:31 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
+#include <stdio.h>
 
 // https://opensource.apple.com/source/network_cmds/network_cmds-481.20.1/unbound/compat/memmove.c.auto.html
 
@@ -50,7 +52,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	return dest;
 
-	/*
+	
+/*
 	size_t i;
 	unsigned char *d;
 	unsigned char *s;
@@ -70,5 +73,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		d[i] = buffer[i];
 		i++;
 	}
-	return (dest);*/
+	return (dest); */
 }

@@ -6,11 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:37:29 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/08 19:44:36 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:23:31 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

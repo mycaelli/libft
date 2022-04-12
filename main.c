@@ -22,6 +22,8 @@ void t_strlen();
 void t_strlcpy();
 void t_strchr();
 void t_strlcat();
+void t_strrchr();
+void t_strncmp();
 
 int main()
 {
@@ -59,7 +61,9 @@ int main()
 	//t_memchr();
 
 	//FT_MEMCMP
+	//printf("em cima");
     //t_memcmp();
+	//printf("embaixo");
 
 	//FT_STRLEN
 	//t_strlen();
@@ -71,7 +75,158 @@ int main()
 	//t_strchr();
 
 	//FT_STRLCAT 
-	t_strlcat();
+	//t_strlcat();
+
+    //FT_STRRCHR
+    //t_strrchr();
+
+	//FT_STRNCMP
+	t_strncmp();
+}
+
+void t_strncmp()
+{
+	printf("-------------------------------------------------------------------------------------------------\n");
+	printf("FT_STRNCMP\n\n");
+
+	char str1[] = "Hello World";
+	char str2[] = "Hello World";
+	printf("input src: %s\n", str1);
+	printf("input dest: %s\n", str2);
+	printf("bytes: 11\n");
+	printf("Expected output: %d\n", strncmp(str2, str1, 11));
+	printf("Received output: %d\n\n", ft_strncmp(str2, str1, 11));
+
+	char str3[] = "0 1 2 3 4 5 6 7 8 9";
+	char str4[] = "0 1 2 3 4 5 a b c d e";
+	printf("input src: %s\n", str3);
+	printf("input dest: %s\n", str4);
+	printf("bytes: 13\n");
+	printf("Expected output: %d\n", strncmp(str4, str3, 13));
+	printf("Received output: %d\n\n", ft_strncmp(str4, str3, 13));
+
+	char str5[] = "Testing strncmp";
+	char str6[] = "Testing function";
+	printf("input src: %s\n", str5);
+	printf("input dest: %s\n", str6);
+	printf("bytes: 16\n");
+	printf("Expected output: %d\n", strncmp(str6, str5, 16));
+	printf("Received output: %d\n\n", ft_strncmp(str6, str5, 16));
+
+	char str7[] = "tutu tutu tutu tu";
+	char str8[] = "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20";
+	printf("input src: %s\n", str7);
+	printf("input dest: %s\n", str8);
+	printf("bytes: 10\n");
+	printf("Expected output: %d\n", strncmp(str8, str7, 10));
+	printf("Received output: %d\n\n", ft_strncmp(str8, str7, 10));
+
+	char str9[] = "funfandoooo ooo";
+	char str10[] = "funfandooooO ooo";
+	printf("input src: %s\n", str9);
+	printf("input src: %s\n", str10);
+	printf("bytes: 15\n");
+	printf("Expected output: %d\n", strncmp(str10, str9, 15));
+	printf("Received output: %d\n\n", ft_strncmp(str10, str9, 15));
+
+	//error
+	char str11[] = "abcdefgh";
+	char str12[] = "aijklmnop";
+	printf("input src: %s\n", str11);
+	printf("input dest: %s\n", str12);
+	printf("bytes: 3\n");
+	printf("Expected output: %d\n", strncmp(str12, str11, 3));
+	printf("Received output: %d\n\n", ft_strncmp(str12, str11, 3));
+
+	char str13[] = " ah";
+	char str14[] = " hj";
+	printf("input src: %s\n", str13);
+	printf("input dest: %s\n", str14);
+	printf("bytes: 1\n");
+	printf("Expected output: %d\n", strncmp(str14, str13, 1));
+	printf("Received output: %d\n\n", ft_strncmp(str14, str13, 1));
+
+	char str15[] = "abc";
+	char str16[] = "ab3";
+	printf("input src: %s\n", str15);
+	printf("input dest: %s\n", str16);
+	printf("bytes: 3\n");
+	printf("Expected output: %d\n", strncmp(str16, str15, 3));
+	printf("Received output: %d\n\n", ft_strncmp(str16, str15, 3));
+
+	//error?
+	char str19[] = "fgHij";
+	char str20[] = "fghije";
+	printf("input src: %s\n", str19);
+	printf("input dest: %s\n", str20);
+	printf("bytes: 5\n");
+	printf("Expected output: %d\n", strncmp(str20, str19, 5));
+	printf("Received output: %d\n\n", ft_strncmp(str20, str19, 5));
+
+
+	printf("FT_STRNCPY\n");
+	printf("-------------------------------------------------------------------------------------------------\n");
+}
+
+
+void t_strrchr()
+{
+    printf("-------------------------------------------------------------------------------------------------\n");
+	printf("FT_STRRCHR\n\n");
+
+	char str1[] = "Hello World";
+	char s1 = 'H';
+	printf("input: %s\n", str1);
+	printf("search: %c\n", s1);
+	printf("Expected output: %s\n", strrchr(str1, s1));
+	printf("Received output: %s\n\n", ft_strrchr(str1, s1));
+
+	char str2[] = "0 1 2 3 4 5 6 7 8 9";
+	char s2 = '9';
+	printf("input: %s\n", str2);
+	printf("search: %c\n", s2);
+	printf("Expected output: %s\n", strrchr(str2, s2));
+	printf("Received output: %s\n\n", ft_strrchr(str2, s2));
+
+	char str3[] = "Testing strrchr";
+	char s3 = 'P';
+	printf("input: %s\n", str3);
+	printf("search: %c\n", s3);
+	printf("Expected output: %s\n", strrchr(str3, s3));
+	printf("Received output: %s\n\n", ft_strrchr(str3, s3));
+
+	char str4[] = "tutu tutu tutu tu";
+	char s4 = 'u';
+	printf("input: %s\n", str4);
+	printf("search: %c\n", s4);
+	printf("Expected output: %s\n", strrchr(str4, s4));
+	printf("Received output: %s\n\n", ft_strrchr(str4, s4));
+
+	char str5[] = "funfandoooo ooo";
+	char s5 = ' ';
+	printf("input: %s\n", str5);
+	printf("search: [empty space] %c\n", s5);
+	printf("Expected output: %s\n", strrchr(str5, s5));
+	printf("Received output: %s\n\n", ft_strrchr(str5, s5));
+
+	char str6[] = "abcdefghijk";
+	char s6 = 'm';
+	printf("input: %s\n", str6);
+	printf("search: %c\n", s6);
+	printf("Expected output: %s\n", strrchr(str6, s6));
+	printf("Received output: %s\n\n", ft_strrchr(str6, s6));
+
+	char str7[] = "hello hello";
+	char s7 = 'l';
+	printf("input: %s\n", str7);
+	printf("search: %c\n", s7);
+	printf("Expected output: %s\n", strrchr(str7, s7));
+	printf("Received output: %s\n\n", ft_strrchr(str7, s7));
+
+	printf("FT_STRRCHR\n");
+	printf("-------------------------------------------------------------------------------------------------\n");
+
+            
 }
 
 void t_strlcat()
@@ -685,14 +840,6 @@ void t_memcpy()
 	printf("Expected output: %s\n", (char *) memcpy(str16, str15, 3));
 	printf("Received output: %s\n\n", (char *) ft_memcpy(str16, str15, 3));
 
-	/*char str17[5] = "12345";
-	char str18[3] = "123";
-	printf("input src: %s\n", str17);
-	printf("input dest: %s\n", str18);
-	printf("copied bytes: 5\n");
-	printf("Expected output: %s\n", (char *) memcpy(str18, str17, 5));
-	printf("Received output: %s\n\n", (char *) ft_memcpy(str18, str17, 5));*/
-
 	char str19[5] = "fghij";
 	char str20[10] = "abcde";
 	printf("input src: %s\n", str19);
@@ -745,15 +892,6 @@ void t_memset()
 	printf("input: empty 10 bytes int array\n");
 	printf("Expected output: %s\n", (char *) memset(str7, 'Z', 10* sizeof(int)));
 	printf("Received output: %s\n\n", (char *) ft_memset(str7, 'Z', 10* sizeof(int)));
-	/*int str6[] = {1, 2, 3, 4, 5};
-	printf("input: ");
-	for (int i = 0; i < 5; i++)
-	{
-		printf("%d ", str6[i]);
-	}
-	printf("\n");
-	printf("Expected output: %s\n", (char *) memset(str6, 'A', 3*sizeof(char)));
-	printf("Received output: %s\n\n", (char *) ft_memset(str6, 'A', 3*sizeof(char))); */
 
 	printf("FT_MEMSET\n");
 	printf("-------------------------------------------------------------------------------------------------\n");
@@ -861,8 +999,6 @@ void t_tolower()
 
 }
 
-
-
 void t_isprint()
 {
 	printf("-------------------------------------------------------------------------------------------------\n");
@@ -937,8 +1073,6 @@ void t_isprint()
 	printf("FT_ISASCII\n");
 	printf("-------------------------------------------------------------------------------------------------\n");
 }
-
-
 
 void t_isascii()
 {
@@ -1020,8 +1154,6 @@ void t_isascii()
 	printf("-------------------------------------------------------------------------------------------------\n");
 }
 
-
-
 void t_isalnum()
 {
 	printf("-------------------------------------------------------------------------------------------------\n");
@@ -1082,7 +1214,6 @@ void t_isalnum()
 	printf("FT_ISALNUM\n");
 	printf("-------------------------------------------------------------------------------------------------\n");
 } 
-
 
 void t_isdigit()
 {
@@ -1164,4 +1295,3 @@ void t_isalpha()
 	printf("FT_ISALPHA\n");
 	printf("-------------------------------------------------------------------------------------------------\n");
 }
-

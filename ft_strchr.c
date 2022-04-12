@@ -6,11 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 00:20:05 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/08 18:39:28 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:23:31 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

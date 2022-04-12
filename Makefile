@@ -17,11 +17,13 @@ SRC = 	ft_isalpha.c \
 		ft_strlen.c \
 		ft_strlcpy.c \
 		ft_strchr.c \
-		ft_strlcat.c
+		ft_strlcat.c \
+		ft_strrchr.c \
+		ft_strncmp.c
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS = -g3 -Wall -Wextra -Werror #-lbsd
+CFLAGS = -g3 -Wall -Wextra -Werror
 
 CC = cc
 

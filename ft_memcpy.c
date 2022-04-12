@@ -6,11 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 04:03:33 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/06 05:09:34 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 23:00:33 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

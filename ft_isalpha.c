@@ -6,9 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 20:52:29 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/05 20:56:15 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 20:15:15 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

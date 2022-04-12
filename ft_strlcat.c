@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 00:10:13 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/12 21:18:45 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:25:18 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (size + src_len);
 	while (i < size - 1)
 		dst[i++] = src[j++];
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (dst_len + src_len);
 }

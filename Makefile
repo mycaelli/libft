@@ -19,7 +19,12 @@ SRC = 	ft_isalpha.c \
 		ft_strchr.c \
 		ft_strlcat.c \
 		ft_strrchr.c \
-		ft_strncmp.c
+		ft_strncmp.c \
+        ft_strnstr.c \
+        ft_bzero.c \
+        ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c
 
 OBJ = $(SRC:.c=.o)
 

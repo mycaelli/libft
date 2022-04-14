@@ -24,6 +24,10 @@ void t_strchr();
 void t_strlcat();
 void t_strrchr();
 void t_strncmp();
+void t_strnstr();
+void t_bzero();
+void t_calloc();
+void t_strdup();
 
 int main()
 {
@@ -61,9 +65,7 @@ int main()
 	//t_memchr();
 
 	//FT_MEMCMP
-	//printf("em cima");
-    //t_memcmp();
-	//printf("embaixo");
+        //t_memcmp();
 
 	//FT_STRLEN
 	//t_strlen();
@@ -77,11 +79,263 @@ int main()
 	//FT_STRLCAT 
 	//t_strlcat();
 
-    //FT_STRRCHR
-    //t_strrchr();
+        //FT_STRRCHR
+        //t_strrchr();
 
 	//FT_STRNCMP
-	t_strncmp();
+	//t_strncmp();
+
+        //FT_STRNSTR
+        //t_strnstr();
+
+        //FT_BZERO
+        //t_bzero();
+
+        //FT_CALLOC
+        //t_calloc();
+
+        //FT_STRDUP
+        t_strdup();
+}
+
+void t_strdup()
+{
+
+printf("-------------------------------------------------------------------------------------------------\n");
+printf("FT_STRDUP\n\n");
+
+    const char *str1 = "teste";
+   // printf("input: %s\n", str1);
+    char *exp1 = strdup(str1);
+    char *rcv1 = ft_strdup(str1);
+   // printf("expected output: %s\n", exp1);
+   // printf("received output: %s\n", rcv1);
+	free(exp1);
+	free(rcv1);
+	printf("\n\n");
+  
+    const char *str2 = "coucou";
+   // printf("input: %s\n", str2);
+    int size_o = sizeof(str2);
+    char *exp2 = strdup(str2);
+    char *rcv2 = ft_strdup(str2);
+   // printf("expected output: %s\n", exp2);
+   // printf("received output: %s\n", rcv2);
+    free(exp2);
+    free(rcv2);
+    printf("\n\n");
+    
+    printf("%d\n", size_o);
+    const char *str3 = "minha string de teste";
+    printf("input: %s\n", str3);
+    char *exp3 = strdup(str3);
+    char *rcv3 = ft_strdup(str3);
+    printf("expected output: %s\n", exp3);
+    printf("received output: %s\n", rcv3);
+    free(exp3);
+	free(rcv3);
+	printf("\n\n");
+
+    const char *str4 = "f";
+    printf("input: %s\n", str4);
+    char *exp4 = strdup(str4);
+    char *rcv4 = ft_strdup(str4);
+    printf("expected output: %s\n", exp4);
+    printf("received output: %s\n", rcv4);
+    free(exp4);
+	free(rcv4);
+	printf("\n\n");
+
+    const char *str5 = "1 2 3 4 5 6 7 8 9";
+    printf("input: %s\n", str5);
+    char *exp5 = strdup(str5);
+    char *rcv5 = ft_strdup(str5);
+    printf("expected output: %s\n", exp5);
+    printf("received output: %s\n", rcv5);
+    free(exp5);
+	free(rcv5);
+	printf("\n\n");
+
+    const char *str6 = "tutu";
+    printf("input: %s\n", str6);
+    char *exp6 = strdup(str6);
+    char *rcv6 = ft_strdup(str6);
+    printf("expected output: %s\n", exp6);
+    printf("received output: %s\n", rcv6);
+	free(exp6);
+	free(rcv6);
+	printf("\n\n");
+
+printf("FT_STRDUP\n");
+printf("-------------------------------------------------------------------------------------------------\n");
+
+}
+    
+
+void t_calloc()
+{
+    char *str1 = calloc(5, sizeof(char));
+    //printf("%s\n", memset(str1, 'A', 5));
+    printf("%lu\n", strlen(str1));    
+}
+
+void t_bzero()
+{
+    printf("-------------------------------------------------------------------------------------------------\n");
+	printf("FT_BZERO\n\n");
+
+	char str2 [6] = "Hello";
+	char *dest2 = strdup(str2);
+	size_t n1 = 3;
+	printf("input dest: %s\n", str2);
+        bzero(str2, n1);
+	ft_bzero(dest2, n1);
+	printf("output bzero: %s\n", str2);
+	printf("output ft_bzero: %s\n\n", dest2);
+	free(dest2);
+
+	char str4 [20] = "a b c d e f g h i j";
+	char *dest4 = strdup(str4);
+	printf("input dest: %s\n", str4);
+	bzero(str4, 10);
+	ft_bzero(dest4, 10);
+	printf("output bzero: %s\n", str4);
+	printf("output ft_bzero: %s\n\n", dest4);
+	free(dest4);
+
+	char str6 [17] = "Testing function";
+	char *dest6 = strdup(str6);
+	printf("input dest: %s\n", str6);
+	bzero(str6, 8);
+	ft_bzero(dest6, 8);
+	printf("output bzero: %s\n", str6);
+	printf("output ft_bzero: %s\n\n", dest6); 
+	free(dest6);
+
+	char str8 [22] = "0 1 2 3 4 5 6 7 8 9 10";
+	char *dest8 = strdup(str8);
+	printf("input dest: %s\n", str8);
+	bzero(str8, 21);
+	ft_bzero(dest8, 21);
+	printf("output bzero: %s\n", str8); 
+	printf("output ft_bzero: %s\n\n", dest8); 
+	free(dest8);
+
+	char str10 [6]= "funfa";
+	char *dest10 = strdup(str10);
+	printf("input src: %s\n", str10);
+	bzero(str10, 5);
+	ft_bzero(dest10, 5);
+	printf("output bzero: %s\n", str10);
+	printf("output ft_bzero: %s\n\n", dest10); 
+	free(dest10);
+
+	char str12 [9]= "abcdefgh";
+	char *dest12 = strdup(str12);
+	printf("input dest: %s\n", str12);
+	bzero(str12, 3);
+	ft_bzero(dest12, 3);
+	printf("output bzero: %s\n", str12);
+	printf("output ft_bzero: %s\n\n", dest12);
+	free(dest12);
+
+	char str14 [3]= "bh";
+	char *dest14 = strdup(str14);
+	printf("input dest: %s\n", str14);
+	bzero(str14, 1);
+	ft_bzero(dest14, 1);
+	printf("output bzero: %s\n", str14);
+	printf("output ft_bzero: %s\n\n", dest14);
+	free(dest14);	
+
+	//null string and >0 bytes
+	char str16 [5]= "abcd";
+	char *dest16 = strdup(str16);
+	printf("input dest: %s\n", str16);
+	bzero(str16, 15);
+	ft_bzero(dest16, 15);
+	printf("output bzero: %s\n", str16);
+	printf("output ft_bzero: %s\n\n", dest16);
+	free(dest16);
+
+	//more bytes than string
+	char str20 [8]= "abcdefg";
+	char *dest20 = strdup(str20);
+	printf("input dest: %s\n", str20);
+	bzero(str20, 15);
+	ft_bzero(dest20, 15);
+	printf("output bzero: %s\n", str20);
+	printf("output ft_bzero: %s\n\n", dest20);
+	free(dest20);
+
+	printf("FT_BZERO\n");
+	printf("-------------------------------------------------------------------------------------------------\n");
+
+}
+
+
+void t_strnstr()
+{
+        printf("-------------------------------------------------------------------------------------------------\n");
+	printf("FT_STRNSTR\n\n");
+
+    //little_len > len
+	const char *str1 = "Hello World";
+	const char *s1 = "Hello"; 
+	printf("input: %s\n",str1);
+	printf("search: %s bytes: 2\n", s1);
+	printf("Expected output: %s\n",strnstr(str1, s1, 2));
+	printf("Received output: %s\n\n", ft_strnstr(str1, s1, 2));
+
+	const char *str2 = "0 1 2 3 4 5 6 7 8 9";
+	const char *s2 = "6 7 8 9";
+	//const char *s2 = "1 2 3 4";
+	printf("input: %s\n", str2);
+	printf("search: %s bytes: 20\n", s2);
+	printf("Expected output: %s\n", strnstr(str2, s2, 20));
+	printf("Received output: %s\n\n", ft_strnstr(str2, s2, 20));
+
+	const char *str3 = "Testing strnstr";
+	const char *s3 = "ting";
+	printf("input: %s\n", str3);
+	printf("search: %s bytes: 6\n", s3);
+	printf("Expected output: %s\n", strnstr(str3, s3, 6));
+	printf("Received output: %s\n\n", ft_strnstr(str3, s3, 6));
+
+	//big is null
+	const char *str4 = "";
+	const char *s4 = "u";
+	printf("input: [null]\n");
+	printf("search: %s bytes: 4\n", s4);
+	printf("Expected output: %s\n", strnstr(str4, s4, 4));
+	printf("Received output: %s\n\n", ft_strnstr(str4, s4, 4));
+
+	const char *str5 = "funfandoooo ooo";
+	const char *s5 = " o";
+	printf("input: %s\n", str5);
+	printf("search: %s bytes: 40\n", s5);
+	printf("Expected output: %s\n", strnstr(str5, s5, 40));
+	printf("Received output: %s\n\n", ft_strnstr(str5, s5, 40));
+
+	//little is null
+	const char *str6 = "abcdefghijk";
+	const char *s6 = "";
+	printf("input: %s\n", str6);
+	printf("search: [null] bytes: 13\n");
+	printf("Expected output: %s\n", strnstr(str6, s6, 13));
+	printf("Received output: %s\n\n", ft_strnstr(str6, s6, 13));
+
+	const char *str7 = "hello hello";
+	const char *s7 = "l";
+	printf("input: %s\n", str7);
+	printf("search: %s bytes: 3\n", s7);
+	printf("Expected output: %s\n", strnstr(str7, s7, 3));
+	printf("Received output: %s\n\n", ft_strnstr(str7, s7, 3));
+
+	printf("FT_STRNSTR\n");
+	printf("-------------------------------------------------------------------------------------------------\n");
+
+
 }
 
 void t_strncmp()
@@ -682,82 +936,75 @@ void t_memmove()
 
 	char str1[] = "Hello World";
 	char str2[100];
+	char *dest1 = strdup(str2);
 	printf("input src: %s\n", str1);
 	printf("input dest: %s\n", str2);
 	printf("copied bytes: 11\n");
 	printf("Expected output: %s\n", (char *) memmove(str2, str1, 11));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str2, str1, 11));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest1, str1, 11));
 
 	char str3[] = "0 1 2 3 4 5 6 7 8 9";
 	char str4[99];
+	char *dest4 = strdup(str4);
 	printf("input src: %s\n", str3);
 	printf("input dest: [NULL]\n");
 	printf("copied bytes: 3\n");
 	printf("Expected output: %s\n", (char *) memmove(str4, str3, 3));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str4, str3, 3));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest4, str3, 3));
 
 	char str5[] = "Testing memmove";
 	char str6[10] = "0123456789";
+	char *dest6 = strdup(str6);
 	printf("input src: %s\n", str5);
 	printf("input dest: %s\n", str6);
 	printf("copied bytes: 7\n");
 	printf("Expected output: %s\n", (char *) memmove(str6, str5, 7));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str6, str5, 7));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest6, str5, 7));
 
 	char str7[] = "tutu tutu tutu tu";
 	char str8[60] = "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20";
+	char *dest8 = strdup(str8);
 	printf("input src: %s\n", str7);
 	printf("input dest: %s\n", str8);
 	printf("copied bytes: 10\n");
 	printf("Expected output: %s\n", (char *) memmove(str8, str7, 10));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str8, str7, 10));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest8, str7, 10));
 
 	char str9[] = "funfandoooo ooo";
 	char str10[100];
+	char *dest10 = strdup(str10);
 	printf("input src: %s\n", str9);
-	printf("input src: [NULL]\n");
+	printf("input dest: [NULL]\n");
 	printf("copied bytes: 5\n");
 	printf("Expected output: %s\n", (char *) memmove(str10, str9, 5));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str10, str9, 5));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest10, str9, 5));
 
 	char str11[20] = "abcdefgh";
 	char str12[20] = "ijklmnop";
+	char *dest12 = strdup(str12);
 	printf("input src: %s\n", str11);
 	printf("input dest: %s\n", str12);
 	printf("copied bytes: 0\n");
 	printf("Expected output: %s\n", (char *) memmove(str12, str11, 0));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str12, str11, 0));
-
-	int str13[10] = {1, 2, 3, 4, 5};
-	int str14[10] = {6, 7, 8, 9, 10};
-	printf("input src: ");
-	for (int i = 0; i < 5; i++)
-		printf("%d ", str13[i]);
-	printf("\n");
-	printf("input dest: ");
-	for (int i = 0; i < 5; i++)
-		printf("%d ", str14[i]);
-	printf("\n");
-
-	printf("copied bytes: 4\n");
-	printf("Expected output: %s\n", (char *) memmove(str14, str13, 4*sizeof(int)));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str14, str13, 4*sizeof(int)));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest12, str11, 0));
 
 	char str15[5] = "abc";
 	char str16[3] = "123";
+	char *dest16 = strdup(str16);
 	printf("input src: %s\n", str15);
 	printf("input dest: %s\n", str16);
 	printf("copied bytes: 3\n");
 	printf("Expected output: %s\n", (char *) memmove(str16, str15, 3));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str16, str15, 3));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest16, str15, 3));
 
 	char str19[5] = "fghij";
 	char str20[10] = "abcde";
+	char *dest20 = strdup(str20);
 	printf("input src: %s\n", str19);
 	printf("input dest: %s\n", str20);
 	printf("copied bytes: 2\n");
 	printf("Expected output: %s\n", (char *) memmove(str20, str19, 2));
-	printf("Received output: %s\n\n", (char *) ft_memmove(str20, str19, 2));
+	printf("Received output: %s\n\n", (char *) ft_memmove(dest20, str19, 2));
 
 
 	printf("FT_MEMMOVE\n");

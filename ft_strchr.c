@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 00:20:05 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/12 20:23:31 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/23 22:13:47 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char) c)
 			return ((char *) s);
 		s++;
 	}
+	if (c == 0 && *s == 0)
+		return ((char *) s);
 	return (NULL);
 }

@@ -12,32 +12,32 @@
 
 #include "libft.h"
 
-static int ft_len(char const *s)
+static int	ft_len(char const *s)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char *str;
-    int len;
-    int i;
-    
-    i = 0;
-    len = ft_len(s);
-    str = (char *)malloc((len + 1) * sizeof(char));
-    if (!str)
-        return (NULL);
-    while (s[i])
-    {
-        str[i] = f(i, s[i]);
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
+	char	*str;
+	int		len;
+	int		i;
+
+	i = 0;
+	len = ft_len(s);
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 04:11:15 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/25 13:51:22 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/25 15:29:06 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ static char	*ft_special_cases(int n)
 	}
 	if (n == -2147483648)
 	{
-		str = (char *) malloc(11 * sizeof(char));
+		str = (char *) malloc(12 * sizeof(char));
 		if (!str)
 			return (NULL);
-		str = "-2147483648";
+		ft_strlcpy(str, "-2147483648", 12);
 	}
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 04:11:15 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/22 23:28:28 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/25 13:49:29 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,22 +64,19 @@ static char	*ft_special_cases(int n)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char	*itoa_n(int n)
 {
 	char	*s;
 	int		size;
 	int		i;
-	int		negative;
 
 	s = NULL;
 	size = ft_numlen(n);
 	i = 0;
-	negative = (n < 0);
 	if (n == 0 || n == -2147483648)
 		return (ft_special_cases(n));
-	if (negative)
-		n *= -1;
-	s = malloc((size + negative) * sizeof(char));
+	n *= -1;
+	s = malloc((size + 1) * sizeof(char));
 	if (!s)
 		return (NULL);
 	while (n != 0)
@@ -87,13 +84,37 @@ char	*ft_itoa(int n)
 		s[i++] = (n % 10) + '0';
 		n = n / 10;
 	}
-	if (negative)
-		s[i++] = '-';
+	s[i++] = '-';
 	if (n == 0)
 		s[i] = '\0';
-	if (negative)
-		ft_strrev(s, size);
+	ft_strrev(s, size);
+	return (s);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*s;
+	int		size;
+	int		i;
+
+	s = NULL;
+	size = ft_numlen(n);
+	i = 0;
+	if (n < 0 || n == 0 || n == -2147483648)
+		s = itoa_n(n);
 	else
+	{
+		s = malloc((size) * sizeof(char));
+		if (!s)
+			return (NULL);
+		while (n != 0)
+		{
+			s[i++] = (n % 10) + '0';
+			n = n / 10;
+		}
+		if (n == 0)
+			s[i] = '\0';
 		ft_strrev(s, size - 1);
+	}
 	return (s);
 }

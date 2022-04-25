@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 04:11:15 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/25 13:49:29 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/25 13:51:22 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*ft_special_cases(int n)
 	return (str);
 }
 
-char	*itoa_n(int n)
+static char	*itoa_n(int n)
 {
 	char	*s;
 	int		size;

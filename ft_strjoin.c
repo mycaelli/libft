@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:33:59 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/26 20:10:03 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/27 00:59:10 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ static size_t	ft_slen(const char *s)
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -32,7 +30,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	concat = NULL;
 	concat = malloc((ft_slen(s1) + ft_slen(s2) + 1) * sizeof(char));
 	if (!concat)
 		return (NULL);
@@ -47,5 +44,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	concat[i] = 0;
 	return (concat);
 }

@@ -6,13 +6,13 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 14:33:59 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/18 21:24:05 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/26 20:10:03 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_slen(const char *s)
+static size_t	ft_slen(const char *s)
 {
 	size_t	i;
 
@@ -32,6 +32,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	concat = NULL;
 	concat = malloc((ft_slen(s1) + ft_slen(s2) + 1) * sizeof(char));
 	if (!concat)
 		return (NULL);

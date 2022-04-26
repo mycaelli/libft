@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 00:01:27 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/26 20:07:51 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/27 01:23:23 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ char	*ft_strdup(const char *s)
 	cpy = NULL;
 	while (s[i])
 		i++;
-	cpy = malloc(i + 1 * sizeof(char));
+	cpy = malloc((i + 1) * sizeof(char));
 	if (!cpy)
 		return (NULL);
-	while (j <= i)
+	while (s[j])
 	{
 		cpy[j] = s[j];
 		j++;
 	}
+	cpy[j] = 0;
 	return (cpy);
 }

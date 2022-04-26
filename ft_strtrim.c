@@ -6,13 +6,13 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 21:31:22 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/22 03:51:34 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/26 20:12:52 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr_(const char *s, int c)
+static char	*ft_strchr_(const char *s, int c)
 {
 	while (*s)
 	{

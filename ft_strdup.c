@@ -6,12 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 00:01:27 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/14 21:47:12 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/26 20:07:51 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strdup(const char *s)
 {

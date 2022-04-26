@@ -6,13 +6,13 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 21:55:54 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/18 14:28:53 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/26 20:13:23 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen_(const char *s)
+static size_t	ft_strlen_(const char *s)
 {
 	size_t	i;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen_(const char *s)
 	return (i);
 }
 
-char	*ft_strdup_(const char *s)
+static char	*ft_strdup_(const char *s)
 {
 	char	*cpy;
 	int		i;

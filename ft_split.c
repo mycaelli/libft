@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 18:44:23 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/25 14:40:52 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/27 00:30:52 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static char	**ft_count_letters(char const *s, char c)
 	str = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (NULL);
-	while (s[i])
+	while (s[i] && pos < ft_count_words(s, c))
 	{
 		count = 0;
 		while (s[i] == c)

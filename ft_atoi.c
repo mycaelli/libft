@@ -6,13 +6,13 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:13:36 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/13 21:30:45 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/26 19:55:39 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int n)
+static int	ft_isspace(int n)
 {
 	if ((n >= 9 && n <= 13) || n == 32)
 		return (1);

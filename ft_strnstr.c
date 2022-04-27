@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_strncmp_(const char *a1, const char *a2, size_t size)
 {

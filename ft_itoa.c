@@ -12,109 +12,60 @@
 
 #include "libft.h"
 
-static int	ft_numlen(int n)
+static int	ft_num_count(int n)
 {
-	int	len;
+	int	count;
 
-	len = 1;
+	count = 0;
+	if (n < 0)
+	{
+		count++;
+		n *= -1;
+	}
 	while (n != 0)
 	{
 		n /= 10;
-		len++;
+		count++;
 	}
-	return (len);
+	return (count);
 }
 
-static void	ft_strrev(char *str, int size)
+static char	*ft_itoa_zero(void)
 {
-	char	aux;
-	int		i;
+	char	*num;
 
-	aux = 0;
-	i = 0;
-	while (i < size / 2)
-	{
-		aux = str[i];
-		str[i] = str[size - 1 - i];
-		str[size - 1 - i] = aux;
-		i++;
-	}
-}
-
-static char	*ft_special_cases(int n)
-{
-	char	*str;
-
-	str = NULL;
-	if (n == 0)
-	{
-		str = (char *) malloc(2 * sizeof(char));
-		if (!str)
-			return (NULL);
-		str[0] = '0';
-		str[1] = 0;
-	}
-	if (n == -2147483648)
-	{
-		str = (char *) malloc(12 * sizeof(char));
-		if (!str)
-			return (NULL);
-		ft_strlcpy(str, "-2147483648", 12);
-	}
-	return (str);
-}
-
-static char	*itoa_n(int n)
-{
-	char	*s;
-	int		size;
-	int		i;
-
-	s = NULL;
-	size = ft_numlen(n);
-	i = 0;
-	if (n == 0 || n == -2147483648)
-		return (ft_special_cases(n));
-	n *= -1;
-	s = malloc((size + 1) * sizeof(char));
-	if (!s)
+	num = (char *)malloc(2 * sizeof(char));
+	if (!num)
 		return (NULL);
-	while (n != 0)
-	{
-		s[i++] = (n % 10) + '0';
-		n = n / 10;
-	}
-	s[i++] = '-';
-	if (n == 0)
-		s[i] = '\0';
-	ft_strrev(s, size);
-	return (s);
+	num[0] = '0';
+	num[1] = '\0';
+	return (num);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*s;
+	char	*num;
 	int		size;
-	int		i;
+	long	long_n;
 
-	s = NULL;
-	size = ft_numlen(n);
-	i = 0;
-	if (n < 0 || n == 0 || n == -2147483648)
-		s = itoa_n(n);
-	else
+	long_n = n;
+	if (n == 0)
+		return (ft_itoa_zero());
+	size = ft_num_count(n);
+	num = (char *)malloc((size + 1) * sizeof(char));
+	if (!num)
+		return (NULL);
+	num[size] = '\0';
+	if (n < 0)
 	{
-		s = malloc((size) * sizeof(char));
-		if (!s)
-			return (NULL);
-		while (n != 0)
-		{
-			s[i++] = (n % 10) + '0';
-			n = n / 10;
-		}
-		if (n == 0)
-			s[i] = '\0';
-		ft_strrev(s, size - 1);
+		num[0] = '-';
+		long_n *= -1;
 	}
-	return (s);
+	while (long_n != 0)
+	{
+		num[size - 1] = (long_n % 10) + '0';
+		long_n /= 10;
+		size--;
+	}
+	return (num);
 }

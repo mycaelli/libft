@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 05:45:34 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/28 11:53:13 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/28 12:00:54 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	if (lst)
 	{
-		(*del)(lst->content);
+		del(lst->content);
 		free(lst);
 	}
 }

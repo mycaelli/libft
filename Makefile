@@ -6,7 +6,7 @@
 #    By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 21:20:54 by mcerquei          #+#    #+#              #
-#    Updated: 2022/04/28 19:11:46 by mcerquei         ###   ########.fr        #
+#    Updated: 2022/04/28 19:53:35 by mcerquei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -I. -c
 
 CC = gcc
 
-AR = ar rc #add s ??
+AR = ar rcs
 
 RM = rm -rf
 
@@ -70,7 +70,7 @@ SRC_OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
 $(NAME):	$(SRC_OBJ)
-	$(AR) $(NAME) $(OBJ)
+	$(AR) $(NAME) $(SRC_OBJ)
 
 $(SRC_OBJ):
 	$(CC) $(CFLAGS) $(SRC)

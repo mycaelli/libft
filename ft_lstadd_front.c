@@ -1,6 +1,19 @@
-void ft_lstadd_front(t_list **lst, t_list *new)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/28 05:44:29 by mcerquei          #+#    #+#             */
+/*   Updated: 2022/04/28 05:44:40 by mcerquei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	//tratar casos de NULL???
 	new->next = *lst;
 	*lst = new;
 }

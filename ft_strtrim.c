@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 21:31:22 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/26 20:12:52 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:55:17 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ static char	*ft_strchr_(const char *s, int c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		len;
-	int		i;
-	char	*trim;
+	unsigned int		len;
+	unsigned int		i;
+	char				*trim;
 
 	len = 0;
 	i = 0;

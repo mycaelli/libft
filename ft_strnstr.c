@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 01:03:21 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/25 12:03:20 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:50:54 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 static int	ft_strncmp_(const char *a1, const char *a2, size_t size)
 {
-	const char	*s1;
-	const char	*s2;
+	const unsigned char	*s1;
+	const unsigned char	*s2;
 
-	s1 = a1;
-	s2 = a2;
+	s1 = (unsigned char *) a1;
+	s2 = (unsigned char *) a2;
 	while (size-- && *s1 && *s2)
 	{
 		if (*s1 != *s2)

@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 23:33:32 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/23 00:15:28 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:45:28 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_len(char const *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

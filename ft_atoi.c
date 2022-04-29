@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:13:36 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/29 04:17:42 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:33:12 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static int	ft_isspace(int n)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	signal;
-	int	result;
+	unsigned int	i;
+	long			signal;
+	long			result;
 
 	i = 0;
 	signal = 1;

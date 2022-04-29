@@ -6,11 +6,9 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 22:17:29 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/05 22:33:08 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 04:23:44 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

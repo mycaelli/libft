@@ -6,11 +6,9 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 20:58:22 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/05 21:06:29 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 04:18:15 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalnum(int c)
 {

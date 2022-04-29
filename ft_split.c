@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 18:44:23 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/27 00:30:52 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 04:20:59 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ char	**ft_split(char const *s, char c)
 		str[i][j] = 0;
 		i++;
 	}
+	str[i] = NULL;
 	return (str);
 }

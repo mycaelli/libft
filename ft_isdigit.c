@@ -6,11 +6,9 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 20:33:49 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/05 21:06:16 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 04:18:33 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

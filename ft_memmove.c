@@ -6,13 +6,13 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 05:17:33 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/26 20:04:42 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 17:33:43 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy_(void *dest, const void *src, size_t n)
+static void	*ft_memcpy_(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 

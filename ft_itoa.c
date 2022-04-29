@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 04:11:15 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/04/25 15:29:06 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/04/29 14:37:54 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_num_count(int n)
 {
-	int	count;
+	unsigned long	count;
 
 	count = 0;
 	if (n < 0)
@@ -44,9 +44,9 @@ static char	*ft_itoa_zero(void)
 
 char	*ft_itoa(int n)
 {
-	char	*num;
-	int		size;
-	long	long_n;
+	char				*num;
+	unsigned long		size;
+	long				long_n;
 
 	long_n = n;
 	if (n == 0)
